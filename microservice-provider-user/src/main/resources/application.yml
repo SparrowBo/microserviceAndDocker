@@ -18,9 +18,13 @@ spring:
 eureka:
   client:
     service-url:
+#      default-zone: http://user:passwd@peer1:8761/eureka/,http://user:passwd@peer2:8762/eureka
       default-zone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
   instance:
     prefer-ip-address: true
+    #创建元数据
+    metadata-map:
+      my-metadata: 我定义的元数据
 logging:
   level:
     root: INFO

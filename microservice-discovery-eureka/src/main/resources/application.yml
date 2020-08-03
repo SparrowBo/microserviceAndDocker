@@ -1,6 +1,13 @@
 spring:
   application:
     name: microservice-discovery-eureka
+#  security:
+#    basic:
+#      enabled: true
+#    user:
+#      name: user
+#      password: passwd
+
 ---
 spring:
   profiles: peer1
@@ -14,9 +21,9 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
+#      default-zone: http://user:passwd@peer2:8762/eureka
       # register to peer2
       default-zone: http://peer2:8762/eureka/
-
 ---
 spring:
   profiles: peer2
@@ -30,5 +37,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
+#      default-zone: http://user:passwd@peer1:8761/eureka
       # register to peer1
-      default-zone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+      default-zone: http://peer1:8761/eureka/

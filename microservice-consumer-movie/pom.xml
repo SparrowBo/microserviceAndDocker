@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!-- 为什么又要我自己写版本号？Ribbon Eureka 集成了 Ribbon 不用再写了-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-ribbon</artifactId>-->
+<!--            <version>1.4.7.RELEASE</version>-->
+<!--        </dependency>-->
+
         <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
